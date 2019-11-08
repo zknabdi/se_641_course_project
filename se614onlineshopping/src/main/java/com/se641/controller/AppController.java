@@ -16,7 +16,7 @@ public class AppController {
 	
 	@RequestMapping(value = {"/", "/home", "/index"})
 	public ModelAndView index() {
-		ModelAndView mv = new ModelAndView("app"); //app.jsp
+		ModelAndView mv = new ModelAndView("index"); //app.jsp
 		String message = "Hi, Test!";
 		mv.addObject("greeting", message);
 		
