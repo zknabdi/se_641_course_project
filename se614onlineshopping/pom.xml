@@ -13,8 +13,20 @@
 		<spring-version>4.3.6</spring-version>
 	</properties>
 	<dependencies>
-		<!-- Spring Dependencies -->
 
+		<!-- JSTL Dependencies -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>standard</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+
+		<!-- Spring Dependencies -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
@@ -49,9 +61,6 @@
 			</plugin>
 
 		</plugins>
-
-
-
 		<finalName>se614onlineshopping</finalName>
 	</build>
 </project>
