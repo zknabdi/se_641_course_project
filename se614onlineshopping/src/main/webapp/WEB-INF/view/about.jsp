@@ -3,5 +3,7 @@
 		<h1>About us</h1>
 		<hr/>
 		<p> About Project </p>
+		
+		
 	</div>
 </div>

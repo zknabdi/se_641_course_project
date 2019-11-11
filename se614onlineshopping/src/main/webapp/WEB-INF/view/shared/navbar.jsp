@@ -1,4 +1,4 @@
- <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top navbar-brand navbar-collapse navbar-toggler ">
     <div class="container">
       <a class="navbar-brand" href="${contextRoot}/home">SE 641 Online Shopping</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,7 +15,7 @@
             <a class="nav-link" href="${contextRoot}/about">About</a>
           </li>
           <li class="nav-item" id="viewProduct">
-            <a class="nav-link" href="${contextRoot}/view">View Products</a>
+            <a class="nav-link" href="${contextRoot}/view/all/products">View Products</a>
           </li>
           <li class="nav-item" id = "contact">
             <a class="nav-link" href="${contextRoot}/contact">Contact</a>

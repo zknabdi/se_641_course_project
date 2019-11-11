@@ -10,10 +10,16 @@
 	<url>http://maven.apache.org</url>
 	<properties>
 		<javaee.version>8.0</javaee.version>
-		<spring-version>4.3.6</spring-version>
+		<spring.version>4.3.6.RELEASE</spring.version>
 	</properties>
 	<dependencies>
+		<!-- Backend Link -->
+		<dependency>
+			<groupId>com.se641</groupId>
+			<artifactId>se641backend</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 
+		</dependency>
 		<!-- JSTL Dependencies -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -30,7 +36,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
-			<version>4.3.6.RELEASE</version>
+			<version>${spring.version}</version>
 		</dependency>
 
 		<!-- Java EE API -->
