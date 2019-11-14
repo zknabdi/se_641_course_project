@@ -1,11 +1,11 @@
 /**
  * 
  */
-package com.se641.backend.dao;
+package com.se641.se641backend.dao;
 
 import java.util.List;
 
-import com.se641.backend.model.Category;
+import com.se641.se641backend.model.Category;
 
 /**
  * @author zknab
@@ -13,6 +13,9 @@ import com.se641.backend.model.Category;
  */
 
 public interface CategoryDao {
+	
+	boolean add(Category category);
+	
 	
 	List<Category> categoryList();
 

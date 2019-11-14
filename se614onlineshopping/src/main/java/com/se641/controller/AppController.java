@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.se641.backend.dao.CategoryDao;
-import com.se641.backend.model.Category;
+import com.se641.se641backend.dao.CategoryDao;
+import com.se641.se641backend.model.Category;
 
 /**
  * @author zknabi

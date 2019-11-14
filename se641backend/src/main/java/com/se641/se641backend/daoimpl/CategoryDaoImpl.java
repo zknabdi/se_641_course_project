@@ -1,24 +1,35 @@
 /**
  * 
  */
-package com.se641.backend.daoimpl;
+package com.se641.se641backend.daoimpl;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
-import com.se641.backend.dao.CategoryDao;
-import com.se641.backend.model.Category;
+
+import com.se641.se641backend.model.Category;
+import com.se641.se641backend.dao.CategoryDao;
 
 /**
  * @author zknab
  *
  */
 @Repository("categoryDAO")
+@Transactional
 public class CategoryDaoImpl implements CategoryDao {
 
 	private static List<Category> categories = new ArrayList<>();
+	/*
+	 *  Add session to create category
+	 */
+	@Autowired
+	private SessionFactory sessionFactory;
 
 	static {
 		Category category = new Category();
@@ -55,7 +66,7 @@ public class CategoryDaoImpl implements CategoryDao {
 	 */
 	@Override
 	public List<Category> categoryList() {
-		// TODO Auto-generated method stub
+		
 		return categories;
 	}
 
@@ -69,6 +80,23 @@ public class CategoryDaoImpl implements CategoryDao {
 			}
 		}
 		return null;
+	}
+
+	@Override
+	@Transactional // transaction
+	public boolean add(Category category) {
+		
+		try {
+			//add category to the DB
+			sessionFactory.getCurrentSession().persist(category);
+			return true;
+			
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+		
 	}
 
 }

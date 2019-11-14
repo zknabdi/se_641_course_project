@@ -15,7 +15,7 @@
 	<dependencies>
 		<!-- Backend Link -->
 		<dependency>
-			<groupId>com.se641</groupId>
+			<groupId>com.se641.se641backend</groupId>
 			<artifactId>se641backend</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 
