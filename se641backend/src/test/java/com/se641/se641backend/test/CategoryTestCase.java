@@ -36,7 +36,7 @@ public class CategoryTestCase {
 	
 	}
 	
-	@Test
+/*	@Test
 	public void testAddCategory() {
 		category = new Category();
 		Category category = new Category();
@@ -45,10 +45,47 @@ public class CategoryTestCase {
 		category.setDescription("For Mobile");
 		category.setImageUrl("CAT_2.png");
 
-		assertEquals("Successfull Added", true, categoryDAO.add(category));
+		assertEquals("Successfull Added", true, categoryDAO.add(category));	
+	}*/
 
-
+	
+/*	@Test
+	public void testGetCatregory() {
+		category = categoryDAO.get(1);
+		assertEquals("Successfull Get a Category by matching  ID : 1", 1, category.getId());	
+	}*/
+	
+	
+	// test Update
+/*	@Test
+	public void testUpdateCatregory() {
+		category = categoryDAO.get(1);
+		category.setName("TV");
+		assertEquals("Successfull Update a Category by matching  ID : TV", true, categoryDAO.update(category));	
+	}
+	*/
+	
+/*	@Test
+	public void testDeleteCatregory() {
+		category = categoryDAO.get(3);
 		
+		assertEquals("Successfull delete a Category by matching  ID : 3", true, categoryDAO.delete(category));	
+	}
+	*/
+	
+/*	@Test
+	public void testListCatregory() {
+		
+		
+		assertEquals("Successfull List of categories from table", 3, categoryDAO.categoryList().size());
+	}*/
+	
+	/*
+	 * Single test case
+	 */
+	@Test
+	public void testSingleCaseCategory() {
+		// NEED TO DO LATER
 		
 	}
 

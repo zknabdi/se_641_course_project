@@ -18,7 +18,8 @@ public interface CategoryDao {
 	
 	
 	List<Category> categoryList();
-
 	Category get(int id);
+	boolean update (Category category);
+	boolean delete (Category category);
 
 }

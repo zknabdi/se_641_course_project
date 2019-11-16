@@ -11,7 +11,7 @@
    http://www.springframework.org/schema/mvc/spring-mvc.xsd
    ">
 	<context:component-scan base-package="com.se641.controller" />
-	<context:component-scan base-package="com.se641.backend.daoimpl" />
+	<context:component-scan base-package="com.se641.se641backend" />
 
 
 	<bean id="viewResolver"
