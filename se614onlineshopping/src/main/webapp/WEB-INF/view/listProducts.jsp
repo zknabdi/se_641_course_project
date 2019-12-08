@@ -22,11 +22,12 @@
 
 					<c:if test="${userClickCategoryProducts}==true">
 						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="${contextRoot}/home">Home </a></li>
+							<li class="breadcrumb-item"><a href="${contextRoot}/home">Home
+							</a></li>
 							<li class="breadcrumb-item active">Category</li>
 							<li class="breadcrumb-item active">${category.name}</li>
 						</ol>
-					<!-- 	<nav aria-label="breadcrumb">
+						<!-- 	<nav aria-label="breadcrumb">
 							<ol class="breadcrumb">
 								<li class="breadcrumb-item"><a href="#">Home</a></li>
 								<li class="breadcrumb-item"><a href="#">Library</a></li>
@@ -37,5 +38,21 @@
 				</div>
 			</div>
 		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<table id="productListTable" class="table table-striped table-borderd">
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Name </th>
+						</tr>
+					</thead>
+				
+				
+				</table>
+			
+			</div>
+		</div>
+
 	</div>
 </div>

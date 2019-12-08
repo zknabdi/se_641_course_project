@@ -23,13 +23,20 @@
 <script>
 	window.menu = '${pageTitle}';
 </script>
+
 <!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
+<!-- DataType CSS -->
+<link href="${css}/bbootstrap-readable-theme.css" rel="stylesheet">
+
+<!-- Bootstrap Dark Theme CSS -->
+<link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
+
+
 
 <!-- Custom styles for this template -->
 <link href="${css}/app.css" rel="stylesheet">
-<!-- Bootstrap Dark Theme CSS -->
-<link href="${css}/bootstrap-dark-theme.min.css" rel="stylesheet">
+
 
 </head>
 
@@ -52,9 +59,10 @@
 			<c:if test="${userClickContact == true}">
 				<%@include file="contact.jsp"%>
 			</c:if>
-			
+
 			<!--  load  -->
-			<c:if test="${userClickAllProducts == true or userClickCategoryProducts == true}">
+			<c:if
+				test="${userClickAllProducts == true or userClickCategoryProducts == true}">
 				<%@include file="listProducts.jsp"%>
 			</c:if>
 		</div>
@@ -62,12 +70,24 @@
 		<!-- Footer -->
 		<%@include file="./shared/footer.jsp"%>
 
-		<!-- Bootstrap core JavaScript -->
-		<script src="${js}/jquery.min.js"></script>
-		<script src="${js}/bootstrap.bundle.min.js"></script>
-
+		<!-- Bootstrap core JS -->
+		<script src="${js}/jquery.js"></script>
+		
+		<!-- Bootstrap Core JS -->
+		<script src="${js}/bootstrap.min.js"></script>
+		
+		<!-- dataTable JS -->
+		<script src="${js}/jquery.dataTables.js"></script>
+		
+		<!-- DataTable Bootstrap Script -->
+		<script src="${js}/dataTables.bootstrap.js"></script>
+		
+		
+		
 		<!-- Adding own project JS -->
 		<script src="${js}/app.js"></script>
+
+
 	</div>
 </body>
 

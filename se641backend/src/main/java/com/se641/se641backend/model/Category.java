@@ -8,6 +8,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.NotBlank;
 
 /**
  * @author zknab
@@ -22,7 +25,9 @@ public class Category {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	@Column(name="name")
+	@Size(min = 2)
 	private String name;
+	@NotBlank
 	@Column(name="description")
 	private String description;
 	@Column(name="image_url")

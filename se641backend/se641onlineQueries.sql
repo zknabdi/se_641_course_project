@@ -1,15 +1,32 @@
-CREATE TABLE category(
-	id INT NOT NULL AUTO_INCREMENT,
-	name VARCHAR(50),
-	description VARCHAR(255),
-	image_url VARCHAR(50),
-	is_active BOOLEAN, 
-	
-	CONSTRAINT pk_category_id PRIMARY KEY (id)
+-- STEP 1: DROP IF EXISTS
+-- DROP USER 'se641'@'localhost';
+-- STEP 2: CREATE USER 
+-- CREATE USER 'se641'@'localhost'
+-- IDENTIFIED BY 'se641';
+
+
+-- STEP 3: DROP IF EXIST and CREATE DB and GRANT TO se641online Database
+DROP DATABASE IF EXISTS se641online;
+CREATE DATABASE se641online;
+-- GRANT ALL
+--   ON se641online.*
+--   TO 'se641'@'localhost'
+--   WITH GRANT OPTION;
+
+-- SHOW GRANTS FOR 'se641'@'localhost';
+
+USE se641online;
+DROP TABLE IF EXISTS se641online.category;
+CREATE TABLE `category` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `image_url` varchar(50) DEFAULT NULL,
+  `is_active` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 );
 
-
-
+DROP TABLE IF EXISTS se641online.user_detail;
 CREATE TABLE user_detail (
 	id INT NOT NULL AUTO_INCREMENT,
 	first_name VARCHAR(50),
@@ -22,7 +39,7 @@ CREATE TABLE user_detail (
 	CONSTRAINT pk_user_id PRIMARY KEY(id)
 );
 
-
+DROP TABLE IF EXISTS se641online.product;
 CREATE TABLE product (
 	id INT NOT NULL AUTO_INCREMENT,
 	code VARCHAR(20),
@@ -38,12 +55,13 @@ CREATE TABLE product (
 	views INT DEFAULT 0,
 	CONSTRAINT pk_product_id PRIMARY KEY (id),
  	CONSTRAINT fk_product_category_id FOREIGN KEY (category_id) REFERENCES category (id),
-	CONSTRAINT fk_product_supplier_id FOREIGN KEY (supplier_id) REFERENCES user_detail(id),	
+	CONSTRAINT fk_product_supplier_id FOREIGN KEY (supplier_id) REFERENCES user_detail(id)
 );	
 
 -- the address table to store the user billing and shipping addresses
+DROP TABLE IF EXISTS se641online.address;
 CREATE TABLE address (
-	id INT NOT NULL AUTO_INCREMENT,
+	id int NOT NULL AUTO_INCREMENT,
 	user_id int,
 	address_line_one VARCHAR(100),
 	address_line_two VARCHAR(100),
@@ -58,6 +76,7 @@ CREATE TABLE address (
 );
 
 -- the cart table to store the user cart top-level details
+DROP TABLE IF EXISTS se641online.cart;
 CREATE TABLE cart (
 	id INT NOT NULL AUTO_INCREMENT,
 	user_id int,
@@ -67,7 +86,7 @@ CREATE TABLE cart (
 	CONSTRAINT pk_cart_id PRIMARY KEY (id)
 );
 -- the cart line table to store the cart details
-
+DROP TABLE IF EXISTS se641online.cart_line;
 CREATE TABLE cart_line (
 	id INT NOT NULL AUTO_INCREMENT,
 	cart_id int,
@@ -82,7 +101,7 @@ CREATE TABLE cart_line (
 
 
 -- the order detail table to store the order
-
+DROP TABLE IF EXISTS se641online.order_detail;
 CREATE TABLE order_detail (
 	id INT NOT NULL AUTO_INCREMENT,
 	user_id int,
@@ -98,7 +117,7 @@ CREATE TABLE order_detail (
 );
 
 -- the order item table to store order items
-
+DROP TABLE IF EXISTS se641online.order_item;
 CREATE TABLE order_item (
 	id INT NOT NULL AUTO_INCREMENT,
 	order_id int,
